@@ -7,8 +7,9 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 /**
- * Assignment
+ * Home Assignment
  * Done by John Ha
+ * Simulted a workday environment to handle money management for the day.
  */
 
 public class Salon {
@@ -18,6 +19,7 @@ public class Salon {
     public static void main(String args[]) throws FileNotFoundException, UnsupportedEncodingException {
     int person = 1;
 
+		//Create a worker for each worker in the salon
         Worker Michelle = new Worker();
         Worker Mai = new Worker();
         Worker Son = new Worker();
@@ -36,6 +38,7 @@ public class Salon {
         /*Comparator<Worker> comparator = new PriorityComparator();
         PriorityQueue<Worker> queue = new PriorityQueue<>(comparator);*/
 
+		//Main menu of operations
         while(!endProgram) {
             System.out.println("What would you like to do?");
             System.out.println("1. Update someone's info");
@@ -107,6 +110,8 @@ public class Salon {
         }
 
     }
+	
+	//Updates when a sale happens
     public static void update(Worker person){
         boolean truth;
         System.out.println("Please enter the money made");
@@ -138,6 +143,8 @@ public class Salon {
         person.updateTip(tip);
 
     }
+	
+	//Updates when an error was made on the user's part
     public static void fix(Worker person){
         int newVal;
         person.info();
@@ -176,6 +183,8 @@ public class Salon {
                 break;
         }
     }
+	
+	//Prints out results of the day onto a txt file
     public static void end(ArrayList<Worker> array) throws FileNotFoundException, UnsupportedEncodingException {
         String names[] = {"Mai", "Michelle", "Son", "Thuy", "Yen", "Gift Card"};
         int i;

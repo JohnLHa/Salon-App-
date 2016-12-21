@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
 /**
- * Assignment
+ * Home Assignment
  * Done by John Ha
  */
 public class PriorityComparator implements Comparator<Worker> {

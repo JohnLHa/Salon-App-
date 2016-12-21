@@ -1,6 +1,7 @@
 /**
- * Assignment
+ * Home Assignment
  * Done by John Ha
+ * Wroker class to represent the works in a nail salon or other similar typ eof business
  */
 public class Worker {
     public int moneyMade;
